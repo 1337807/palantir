@@ -1,5 +1,5 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :redirect_to_root if User.all.any?
+  before_action :redirect_to_root if User.any?
 
   def redirect_to_root
     redirect_to :root unless current_user
